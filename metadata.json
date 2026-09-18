@@ -1,0 +1,10 @@
+{
+  "name": "Remix SIH 2026 Mausam - Personalized Weather Intelligence",
+  "description": "Personalized weather companion with tailored dashboards for Health, Fitness, Beach \u0026 Surf, Travel, Parents, Gardeners, Commuters, and Event Planners with real-time data, Gemini AI insights, and offline caching.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

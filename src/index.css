@@ -1,0 +1,242 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+  }
+}
+
+/* Light Mode Overrides */
+.light-mode {
+  color: #0f172a;
+}
+
+.light-mode .bg-slate-950,
+.light-mode .bg-slate-900 {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  color: #0f172a !important;
+}
+
+.light-mode [class*="bg-slate-900/"],
+.light-mode [class*="bg-slate-950/"] {
+  background-color: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(16px);
+  color: #0f172a !important;
+}
+
+.light-mode .border-white\/10,
+.light-mode .border-white\/5,
+.light-mode .border-slate-800,
+.light-mode .border-slate-800\/60,
+.light-mode .border-slate-700 {
+  border-color: rgba(203, 213, 225, 0.8) !important;
+}
+
+.light-mode .text-white {
+  color: #0f172a !important;
+}
+
+.light-mode .text-slate-200,
+.light-mode .text-slate-300 {
+  color: #1e293b !important;
+}
+
+.light-mode .text-slate-400 {
+  color: #475569 !important;
+}
+
+.light-mode .text-slate-500 {
+  color: #64748b !important;
+}
+
+/* Modals & Drawers in Light Mode */
+.light-mode .bg-slate-900.border {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.light-mode .bg-slate-950\/80,
+.light-mode .bg-slate-950\/70,
+.light-mode .bg-slate-950\/90,
+.light-mode .bg-slate-950\/60 {
+  background-color: #f8fafc !important;
+}
+
+/* Form controls in light mode */
+.light-mode input[type="text"],
+.light-mode input[type="search"],
+.light-mode textarea,
+.light-mode select {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light-mode input::placeholder,
+.light-mode textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Modal dark overlays */
+.light-mode .bg-black\/75,
+.light-mode .bg-black\/70,
+.light-mode .bg-black\/80 {
+  background-color: rgba(15, 23, 42, 0.45) !important;
+}
+
+/* Hover highlights in light mode */
+.light-mode .hover\:bg-slate-800:hover,
+.light-mode .hover\:bg-slate-900:hover,
+.light-mode .hover\:bg-slate-850:hover {
+  background-color: #e2e8f0 !important;
+}
+
+.light-mode .hover\:text-white:hover {
+  color: #0f172a !important;
+}
+
+/* Floating AI Button remains high-contrast vibrant */
+#floating-mausam-ai-btn,
+#floating-ai-copilot-trigger-btn {
+  color: #ffffff !important;
+}
+#floating-mausam-ai-btn span,
+#floating-ai-copilot-trigger-btn span {
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   Mausam AI Companion Chat - High Visibility & Guaranteed Readability
+   ========================================================================== */
+.mausam-ai-modal-card {
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 40px -10px rgba(168, 85, 247, 0.3);
+}
+
+/* Light Mode Overrides for AI Copilot */
+.light-mode .mausam-ai-modal-card {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.25), 0 0 30px -5px rgba(168, 85, 247, 0.2) !important;
+}
+
+.light-mode .mausam-chat-ai-bubble {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05) !important;
+}
+
+.dark-mode .mausam-chat-ai-bubble,
+:not(.light-mode) .mausam-chat-ai-bubble {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* User Bubble is always distinct vibrant gradient with white text */
+.mausam-chat-user-bubble {
+  background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3) !important;
+}
+
+.light-mode .mausam-chat-user-bubble,
+.light-mode .mausam-chat-user-bubble * {
+  color: #ffffff !important;
+}
+
+/* Explicit Markdown Typography in AI Responses */
+.mausam-chat-markdown h1,
+.mausam-chat-markdown h2,
+.mausam-chat-markdown h3,
+.mausam-chat-markdown h4 {
+  font-weight: 700;
+  margin-top: 0.5rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.35;
+}
+
+.light-mode .mausam-chat-markdown h1,
+.light-mode .mausam-chat-markdown h2,
+.light-mode .mausam-chat-markdown h3,
+.light-mode .mausam-chat-markdown h4 {
+  color: #0369a1 !important;
+}
+
+:not(.light-mode) .mausam-chat-markdown h1,
+:not(.light-mode) .mausam-chat-markdown h2,
+:not(.light-mode) .mausam-chat-markdown h3,
+:not(.light-mode) .mausam-chat-markdown h4 {
+  color: #38bdf8 !important;
+}
+
+.mausam-chat-markdown p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.mausam-chat-markdown ul,
+.mausam-chat-markdown ol {
+  margin-top: 0.35rem;
+  margin-bottom: 0.6rem;
+  padding-left: 1.35rem;
+}
+
+.mausam-chat-markdown ul {
+  list-style-type: disc !important;
+}
+
+.mausam-chat-markdown ol {
+  list-style-type: decimal !important;
+}
+
+.mausam-chat-markdown li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.55;
+}
+
+.mausam-chat-markdown strong,
+.mausam-chat-markdown b {
+  font-weight: 700;
+}
+
+.light-mode .mausam-chat-markdown strong,
+.light-mode .mausam-chat-markdown b {
+  color: #0f172a !important;
+}
+
+:not(.light-mode) .mausam-chat-markdown strong,
+:not(.light-mode) .mausam-chat-markdown b {
+  color: #ffffff !important;
+}
+
+.mausam-chat-markdown hr {
+  margin: 0.75rem 0;
+  border-color: rgba(148, 163, 184, 0.3);
+}
+
+.mausam-chat-markdown code {
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+  font-family: monospace;
+  font-size: 0.85em;
+  background-color: rgba(100, 116, 139, 0.2);
+}
+
